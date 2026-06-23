@@ -33,11 +33,16 @@ export default function ServiceAreaSection() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-cyan-500/15 via-navy-900 to-orange-500/15">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <MapPin className="h-16 w-16 text-cyan-300/40" />
-              </div>
-              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-navy-950/80 p-4 backdrop-blur-sm">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-white/10">
+              <iframe
+                title="Jarrell's Quality service area map — Murfreesboro, TN"
+                src="https://www.google.com/maps?q=Murfreesboro,+TN&z=9&output=embed"
+                className="absolute inset-0 h-full w-full grayscale invert-[0.92] contrast-[1.1]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-navy-950/85 p-4 backdrop-blur-sm">
                 <p className="text-sm font-semibold text-white">
                   Not sure if we cover your area?
                 </p>

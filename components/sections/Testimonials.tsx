@@ -1,5 +1,5 @@
-import { Star } from "lucide-react";
-import { TESTIMONIALS } from "@/lib/site-config";
+import { Star, ThumbsUp } from "lucide-react";
+import { TESTIMONIALS, REVIEW_AGGREGATE } from "@/lib/site-config";
 import Reveal from "@/components/ui/Reveal";
 import GlowCard from "@/components/ui/GlowCard";
 
@@ -16,9 +16,20 @@ export default function Testimonials() {
           </h2>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <Reveal delay={0.05} className="mx-auto mt-8 flex max-w-md items-center justify-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3">
+          <ThumbsUp className="h-5 w-5 text-cyan-300" />
+          <span className="text-sm text-zinc-300">
+            <span className="font-bold text-white">
+              {REVIEW_AGGREGATE.percentRecommend}% recommend
+            </span>{" "}
+            us on {REVIEW_AGGREGATE.source} ({REVIEW_AGGREGATE.reviewCount}{" "}
+            reviews)
+          </span>
+        </Reveal>
+
+        <div className="mx-auto mt-10 grid max-w-2xl gap-6">
           {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.name} delay={i * 0.1}>
+            <Reveal key={t.name} delay={0.1 + i * 0.1}>
               <GlowCard className="h-full">
                 <div className="flex gap-1">
                   {Array.from({ length: t.rating }).map((_, idx) => (
@@ -28,7 +39,7 @@ export default function Testimonials() {
                     />
                   ))}
                 </div>
-                <p className="mt-4 text-sm leading-6 text-zinc-300">
+                <p className="mt-4 text-base leading-7 text-zinc-300">
                   &ldquo;{t.quote}&rdquo;
                 </p>
                 <div className="mt-5 text-sm font-semibold text-white">

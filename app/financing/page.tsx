@@ -8,7 +8,7 @@ import Reveal from "@/components/ui/Reveal";
 export const metadata: Metadata = {
   title: "Financing",
   description:
-    "Flexible financing options for HVAC repairs and system replacements from Jarrell's Quality — comfort shouldn't have to wait.",
+    "Jarrell's Quality is working on flexible financing options for HVAC repairs and system replacements — ask us for the latest when you call.",
   keywords: ["HVAC financing", "AC financing", "furnace financing"],
 };
 
@@ -17,19 +17,19 @@ const POINTS = [
     icon: CreditCard,
     title: "Flexible Plans",
     description:
-      "Multiple term lengths so you can find a monthly payment that fits your budget.",
+      "We're looking at multiple term lengths so a new system fits your budget.",
   },
   {
     icon: Clock3,
     title: "Fast Approval",
     description:
-      "Most applications get a quick decision so you're not left waiting in the heat or cold.",
+      "The goal is a quick decision so you're not left waiting in the heat or cold.",
   },
   {
     icon: ShieldCheck,
     title: "No Pressure",
     description:
-      "We'll walk you through the options honestly — no pushy sales tactics, ever.",
+      "Whatever we offer, we'll walk you through it honestly — no pushy sales tactics, ever.",
   },
 ];
 
@@ -38,8 +38,8 @@ export default function FinancingPage() {
     <>
       <PageHero
         eyebrow="Financing"
-        title="Comfort Now, Pay Over Time"
-        description="A failed system or major repair shouldn't have to wait on a full cash payment. We work with financing partners to help make new installs and big repairs more manageable."
+        title="Financing Options — Coming Soon"
+        description="We don't have a financing program live just yet, but we're working on it so a failed system or major repair doesn't have to wait on a full cash payment. Give us a call — we'll tell you what's currently available."
       >
         <CtaButtons className="mt-8" />
       </PageHero>
@@ -66,9 +66,8 @@ export default function FinancingPage() {
 
           <Reveal delay={0.2} className="mt-10">
             <p className="mx-auto max-w-2xl text-center text-sm text-zinc-400">
-              Specific financing offers, terms, and approval requirements are
-              provided by our lending partners and may change. Call us to
-              discuss current options for your project.
+              In the meantime, ask us directly about payment options for your
+              project — we&apos;ll always give you a straight answer.
             </p>
           </Reveal>
         </div>

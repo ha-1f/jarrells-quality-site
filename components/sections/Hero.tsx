@@ -13,12 +13,10 @@ const HeroScene = dynamic(() => import("@/components/three/HeroScene"), {
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy-950">
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900 to-navy-950" />
-      <div className="absolute -left-32 top-10 h-72 w-72 rounded-full bg-cyan-500/20 blur-[100px]" />
-      <div className="absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-orange-500/20 blur-[100px]" />
+    <section className="bg-camo relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/70 via-navy-950/40 to-navy-950/90" />
 
-      <div className="absolute inset-0 opacity-90">
+      <div className="absolute inset-0 opacity-70">
         <HeroScene />
       </div>
 

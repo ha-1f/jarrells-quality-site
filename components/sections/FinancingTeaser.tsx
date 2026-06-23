@@ -14,11 +14,11 @@ export default function FinancingTeaser() {
               </div>
               <div>
                 <h3 className="font-display text-xl font-bold text-white">
-                  New System? We Have Financing Options.
+                  Financing Options — Coming Soon
                 </h3>
                 <p className="mt-1 text-sm text-zinc-400">
-                  Comfort shouldn&apos;t wait on a full cash payment — ask
-                  about flexible plans for repairs and replacements.
+                  We&apos;re working on flexible financing for new systems
+                  and big repairs. Ask us for the latest when you call.
                 </p>
               </div>
             </div>
@@ -26,7 +26,7 @@ export default function FinancingTeaser() {
               href="/financing"
               className="flex shrink-0 items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-navy-950 transition-transform hover:scale-105"
             >
-              Explore Financing <ArrowRight className="h-4 w-4" />
+              Learn More <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </Reveal>

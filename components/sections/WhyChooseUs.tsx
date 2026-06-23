@@ -27,8 +27,9 @@ const ITEMS = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative bg-gradient-to-b from-navy-950 to-navy-900 py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-4 sm:px-8">
+    <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 to-navy-900 py-24 sm:py-32">
+      <div className="bg-camo absolute inset-0 opacity-[0.06]" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-cyan-300">
             Why Choose Us

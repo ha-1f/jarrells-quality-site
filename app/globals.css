@@ -38,13 +38,15 @@ html {
   background: rgba(34, 211, 238, 0.3);
 }
 
+/* Low-key camo using the brand colorway (navy/slate/orange-brown) instead of military green */
 .bg-camo {
-  background-color: #2b3a1f;
+  background-color: #0a1424;
   background-image:
-    radial-gradient(ellipse 60% 40% at 20% 30%, #4a5c2e 0%, transparent 60%),
-    radial-gradient(ellipse 50% 35% at 75% 20%, #1d2814 0%, transparent 55%),
-    radial-gradient(ellipse 55% 45% at 60% 75%, #5c4a28 0%, transparent 60%),
-    radial-gradient(ellipse 40% 30% at 15% 80%, #1d2814 0%, transparent 55%);
+    radial-gradient(ellipse 55% 38% at 18% 28%, #15314a 0%, transparent 62%),
+    radial-gradient(ellipse 48% 32% at 78% 18%, #1d2c1f 0%, transparent 58%),
+    radial-gradient(ellipse 52% 42% at 62% 78%, #3a2a1a 0%, transparent 62%),
+    radial-gradient(ellipse 38% 28% at 12% 82%, #14202e 0%, transparent 55%),
+    radial-gradient(ellipse 30% 22% at 45% 45%, #2a3a1f 0%, transparent 60%);
 }
 
 .bg-woodgrain {

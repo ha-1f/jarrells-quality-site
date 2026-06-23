@@ -166,29 +166,23 @@ export const STATS = [
   { value: 24, suffix: "/7", label: "Emergency Availability" },
 ];
 
+// Real, verified review pulled from the business's Facebook page — replace/add
+// more as new ones come in (Facebook gates older reviews behind login).
 export const TESTIMONIALS = [
   {
-    name: "Sarah M.",
-    location: "Murfreesboro, TN",
+    name: "Melissa Davis",
+    location: "Facebook Review",
     quote:
-      "Jarrell's came out same-day when our AC quit in July. Honest about the problem, fair on price, and fixed it right the first time.",
-    rating: 5,
-  },
-  {
-    name: "Dustin R.",
-    location: "Smyrna, TN",
-    quote:
-      "Replaced our whole system before winter. Clean install, walked us through everything, and the new furnace is quiet and efficient.",
-    rating: 5,
-  },
-  {
-    name: "Patricia H.",
-    location: "La Vergne, TN",
-    quote:
-      "Family owned and it shows — they treat your house like it's theirs. We're on the maintenance plan now and have zero complaints.",
+      "Amazing service! Will use Jarrell's from now on! Professional and polite. He explained everything! And did I mention fast!",
     rating: 5,
   },
 ];
+
+export const REVIEW_AGGREGATE = {
+  source: "Facebook",
+  percentRecommend: 86,
+  reviewCount: 6,
+};
 
 export const FAQS = [
   {
@@ -214,7 +208,7 @@ export const FAQS = [
   {
     question: "Do you offer financing?",
     answer:
-      "Yes, we offer financing options for system replacements and larger repairs so comfort doesn't have to wait on a full cash payment. Ask us about current plans when you call.",
+      "We're currently working on financing options for system replacements and larger repairs. Give us a call to ask what's available right now.",
   },
   {
     question: "What areas do you serve?",
