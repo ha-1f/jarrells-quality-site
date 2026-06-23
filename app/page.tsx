@@ -1,4 +1,5 @@
 import Hero from "@/components/sections/Hero";
+import HowItWorks from "@/components/sections/HowItWorks";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import StatsBand from "@/components/sections/StatsBand";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <HowItWorks />
       <StatsBand />
       <ServicesGrid />
       <WhyChooseUs />

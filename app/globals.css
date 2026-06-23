@@ -15,6 +15,13 @@
   --color-navy-950: #050a14;
   --color-navy-900: #0a1424;
   --color-navy-800: #101e35;
+
+  --color-wood-900: #2b1b10;
+  --color-wood-800: #3f2818;
+  --color-wood-700: #5c3a22;
+  --color-wood-500: #8a5a32;
+  --color-cream-100: #fbf3e7;
+  --color-cream-200: #f3e6d0;
 }
 
 body {
@@ -29,4 +36,24 @@ html {
 
 ::selection {
   background: rgba(34, 211, 238, 0.3);
+}
+
+.bg-camo {
+  background-color: #2b3a1f;
+  background-image:
+    radial-gradient(ellipse 60% 40% at 20% 30%, #4a5c2e 0%, transparent 60%),
+    radial-gradient(ellipse 50% 35% at 75% 20%, #1d2814 0%, transparent 55%),
+    radial-gradient(ellipse 55% 45% at 60% 75%, #5c4a28 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 15% 80%, #1d2814 0%, transparent 55%);
+}
+
+.bg-woodgrain {
+  background-color: var(--color-wood-800);
+  background-image: repeating-linear-gradient(
+    95deg,
+    rgba(0, 0, 0, 0.12) 0px,
+    rgba(0, 0, 0, 0.12) 1px,
+    transparent 3px,
+    transparent 14px
+  );
 }

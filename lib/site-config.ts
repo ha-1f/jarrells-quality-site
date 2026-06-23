@@ -1,6 +1,7 @@
 export const SITE = {
   name: "Jarrell's Quality",
   tagline: "Heating · Cooling · Comfort",
+  homeTagline: "Your Neighbors in Heating & Cooling",
   domain: "jarrellsqualitytn.com",
   phoneDisplay: "(615) 796-1384",
   phoneTel: "tel:+16157961384",
@@ -32,14 +33,36 @@ export const SITE = {
 
 export type NavLink = { label: string; href: string };
 
+// Kept short on purpose — the goal is a menu simple enough for anyone to use.
 export const NAV_LINKS: NavLink[] = [
   { label: "Services", href: "/services" },
+  { label: "Reviews", href: "/reviews" },
+  { label: "About Us", href: "/about" },
+];
+
+export const MORE_LINKS: NavLink[] = [
   { label: "Maintenance Plans", href: "/maintenance-plans" },
   { label: "Financing", href: "/financing" },
-  { label: "Reviews", href: "/reviews" },
-  { label: "About", href: "/about" },
   { label: "Service Areas", href: "/service-areas" },
   { label: "Blog", href: "/blog" },
+];
+
+export const HOW_IT_WORKS = [
+  {
+    step: "1",
+    title: "Tell Us What's Going On",
+    description: "Name, number, and what you need. That's it — takes about 30 seconds.",
+  },
+  {
+    step: "2",
+    title: "We Call You Back",
+    description: "A real person from our family calls to find a time that works for you.",
+  },
+  {
+    step: "3",
+    title: "We Show Up & Fix It",
+    description: "Friendly, on time, and we explain everything before we start.",
+  },
 ];
 
 export type ServiceMeta = {

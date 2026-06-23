@@ -4,11 +4,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone } from "lucide-react";
-import { NAV_LINKS, SITE } from "@/lib/site-config";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { NAV_LINKS, MORE_LINKS, SITE } from "@/lib/site-config";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [moreOpen, setMoreOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-navy-950/80 backdrop-blur-xl">
@@ -42,6 +43,36 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+          <div
+            className="relative"
+            onMouseEnter={() => setMoreOpen(true)}
+            onMouseLeave={() => setMoreOpen(false)}
+          >
+            <button className="flex items-center gap-1 text-sm font-medium text-zinc-300 transition-colors hover:text-cyan-300">
+              More <ChevronDown className="h-3.5 w-3.5" />
+            </button>
+            <AnimatePresence>
+              {moreOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: 4 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 4 }}
+                  transition={{ duration: 0.15 }}
+                  className="absolute left-0 top-full mt-2 w-52 rounded-xl border border-white/10 bg-navy-900 p-2 shadow-xl"
+                >
+                  {MORE_LINKS.map((link) => (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      className="block rounded-lg px-3 py-2 text-sm text-zinc-300 hover:bg-white/5 hover:text-white"
+                    >
+                      {link.label}
+                    </Link>
+                  ))}
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </nav>
 
         <div className="hidden items-center gap-3 lg:flex">
@@ -79,7 +110,7 @@ export default function Header() {
             className="overflow-hidden border-t border-white/10 bg-navy-950 lg:hidden"
           >
             <div className="flex flex-col gap-1 px-4 py-4">
-              {NAV_LINKS.map((link) => (
+              {[...NAV_LINKS, ...MORE_LINKS].map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
