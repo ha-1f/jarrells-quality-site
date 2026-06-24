@@ -3,10 +3,9 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 import { Send, CheckCircle2 } from "lucide-react";
-import { SERVICES } from "@/lib/site-config";
 
 const inputClass =
-  "w-full rounded-xl border border-earth-700/50 bg-earth-800/30 px-4 py-3 text-sm text-cream-100 placeholder:text-cream-300/40 outline-none transition-colors focus:border-fire-500/60 focus:bg-earth-800/50";
+  "w-full rounded-2xl border-2 border-earth-700/50 bg-earth-800/30 px-5 py-4 text-lg text-cream-100 placeholder:text-cream-300/40 outline-none transition-colors focus:border-fire-500/60 focus:bg-earth-800/50";
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,8 +22,8 @@ export default function LeadForm() {
         animate={{ opacity: 1, scale: 1 }}
         className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-camo-600/30 bg-camo-800/20 p-10 text-center"
       >
-        <CheckCircle2 className="h-12 w-12 text-camo-500" />
-        <h3 className="font-display text-xl font-bold text-cream-50">
+        <CheckCircle2 className="h-14 w-14 text-camo-500" />
+        <h3 className="font-display text-2xl font-bold text-cream-50">
           Request received!
         </h3>
         <p className="max-w-sm text-sm text-cream-300">
@@ -39,109 +38,67 @@ export default function LeadForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="grid gap-4 rounded-3xl border border-earth-700/40 bg-forest-900/60 p-6 backdrop-blur-sm sm:grid-cols-2 sm:p-8"
+      className="space-y-5 rounded-3xl border border-earth-700/40 bg-forest-900/60 p-6 backdrop-blur-sm sm:p-8"
     >
-      <div className="sm:col-span-2">
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Full Name *
+      <div>
+        <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+          Your Name <span className="text-fire-500">*</span>
         </label>
-        <input required name="name" className={inputClass} placeholder="Jane Smith" />
+        <input
+          required
+          name="name"
+          placeholder="John Smith"
+          className={inputClass}
+        />
       </div>
 
       <div>
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Phone *
+        <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+          Phone Number <span className="text-fire-500">*</span>
         </label>
         <input
           required
           type="tel"
           name="phone"
+          placeholder="(615) 555-1234"
           className={inputClass}
-          placeholder="(615) 555-0123"
         />
       </div>
 
       <div>
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Email *
-        </label>
-        <input
-          required
-          type="email"
-          name="email"
-          className={inputClass}
-          placeholder="jane@email.com"
-        />
-      </div>
-
-      <div className="sm:col-span-2">
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Service Address *
+        <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+          Address <span className="text-fire-500">*</span>
         </label>
         <input
           required
           name="address"
-          className={inputClass}
           placeholder="123 Main St, Murfreesboro, TN"
-        />
-      </div>
-
-      <div>
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Service Needed *
-        </label>
-        <select required name="service" className={inputClass} defaultValue="">
-          <option value="" disabled>
-            Select a service
-          </option>
-          {SERVICES.map((s) => (
-            <option key={s.slug} value={s.title}>
-              {s.title}
-            </option>
-          ))}
-          <option value="Maintenance Plan">Maintenance Plan</option>
-          <option value="Other">Other</option>
-        </select>
-      </div>
-
-      <div>
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Preferred Date / Time
-        </label>
-        <input
-          type="datetime-local"
-          name="preferredTime"
           className={inputClass}
         />
       </div>
 
-      <div className="sm:col-span-2">
-        <label className="mb-1.5 block text-xs font-semibold text-cream-300">
-          Message
+      <div>
+        <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+          What&apos;s going on?{" "}
+          <span className="text-xs font-normal text-cream-300/50">(optional)</span>
         </label>
         <textarea
-          name="message"
+          name="description"
           rows={4}
+          placeholder="Tell us what you're experiencing — even if you're not sure what's wrong, that's okay!"
           className={inputClass}
-          placeholder="Tell us what's going on..."
         />
       </div>
-
-      <label className="flex items-center gap-2.5 text-sm text-cream-200 sm:col-span-2">
-        <input
-          type="checkbox"
-          name="emergency"
-          className="h-4 w-4 rounded border-earth-700/50 bg-earth-800/30 accent-fire-500"
-        />
-        This is an emergency / no heat or no cool situation
-      </label>
 
       <button
         type="submit"
-        className="mt-2 flex items-center justify-center gap-2 rounded-full bg-fire-500 px-8 py-4 text-sm font-semibold text-white transition-all hover:bg-fire-600 hover:scale-105 sm:col-span-2"
+        className="flex w-full items-center justify-center gap-2 rounded-full bg-fire-500 px-8 py-5 text-lg font-bold text-white transition-all hover:bg-fire-600 hover:scale-[1.02]"
       >
-        Request Estimate <Send className="h-4 w-4" />
+        Send My Request <Send className="h-5 w-5" />
       </button>
+      <p className="text-center text-xs text-cream-300/50">
+        No pressure, no spam — just a friendly call back.
+      </p>
     </form>
   );
 }

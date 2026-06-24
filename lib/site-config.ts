@@ -6,7 +6,7 @@ export const SITE = {
   phoneDisplay: "(615) 796-1384",
   phoneTel: "tel:+16157961384",
   smsHref: "sms:+16157961384",
-  email: "info@jarrellsqualitytn.com",
+  email: "thomas.jarrell@jarrellsqualityhvac.com",
   promo: "$25 off any service call — mention it when you call.",
   serviceAreas: [
     "Murfreesboro",
@@ -19,9 +19,8 @@ export const SITE = {
     "Tullahoma",
   ],
   hours: [
-    { day: "Monday – Friday", time: "7:00 AM – 7:00 PM" },
-    { day: "Saturday", time: "8:00 AM – 4:00 PM" },
-    { day: "Sunday", time: "Emergency calls only" },
+    { day: "Monday – Friday", time: "8:00 AM – 5:00 PM" },
+    { day: "Saturday – Sunday", time: "Emergency calls only" },
   ],
   trustBadges: [
     "Licensed & Insured",
@@ -71,7 +70,7 @@ export type ServiceMeta = {
   title: string;
   shortTitle: string;
   summary: string;
-  icon: "snowflake" | "flame" | "wind" | "gauge" | "leaf" | "wrench";
+  icon: "snowflake" | "flame" | "wind" | "leaf" | "wrench";
   keywords: string[];
   bullets: string[];
 };
@@ -123,22 +122,6 @@ export const SERVICES: ServiceMeta[] = [
       "Safety inspections, including carbon monoxide checks",
       "Gas, electric, and dual-fuel systems",
       "Seasonal tune-up plans available",
-    ],
-  },
-  {
-    slug: "heat-pumps",
-    href: "/services/heat-pumps",
-    title: "Heat Pumps",
-    shortTitle: "Heat Pumps",
-    summary:
-      "Year-round comfort from a single high-efficiency system — heating and cooling in one.",
-    icon: "gauge",
-    keywords: ["heat pump installation", "heat pump repair", "heat pump service"],
-    bullets: [
-      "New heat pump installation",
-      "Repair & seasonal maintenance",
-      "Helps lower energy bills year-round",
-      "Great fit for additions & new construction",
     ],
   },
   {

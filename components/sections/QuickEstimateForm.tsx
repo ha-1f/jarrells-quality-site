@@ -2,18 +2,13 @@
 
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
-import { Snowflake, Flame, Wrench, CheckCircle2, ArrowRight } from "lucide-react";
-import clsx from "clsx";
+import { CheckCircle2, Send } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 
-const NEEDS = [
-  { key: "cooling", label: "It's Hot", icon: Snowflake },
-  { key: "heating", label: "It's Cold", icon: Flame },
-  { key: "other", label: "Something Else", icon: Wrench },
-];
+const inputClass =
+  "w-full rounded-2xl border-2 border-earth-700/50 bg-earth-800/30 px-5 py-4 text-lg text-cream-100 placeholder:text-cream-300/40 outline-none transition-colors focus:border-fire-500/60 focus:bg-earth-800/50";
 
 export default function QuickEstimateForm() {
-  const [need, setNeed] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -46,51 +41,69 @@ export default function QuickEstimateForm() {
         onSubmit={handleSubmit}
         className="mx-auto max-w-2xl rounded-3xl border border-earth-700/50 bg-forest-900/60 p-6 backdrop-blur-sm sm:p-8"
       >
-        <p className="text-center text-sm font-semibold uppercase tracking-wide text-tan-400">
-          Get a Free Estimate — It&apos;s This Easy
+        <p className="text-center text-lg font-bold text-cream-50">
+          Get a Free Estimate
+        </p>
+        <p className="mt-1 text-center text-sm text-cream-300/70">
+          Fill this out and we&apos;ll call you back — it takes 30 seconds.
         </p>
 
-        <div className="mt-5 grid grid-cols-3 gap-3">
-          {NEEDS.map((n) => (
-            <button
-              key={n.key}
-              type="button"
-              onClick={() => setNeed(n.key)}
-              className={clsx(
-                "flex flex-col items-center gap-2 rounded-2xl border-2 px-3 py-5 text-sm font-bold transition-all",
-                need === n.key
-                  ? "border-fire-500 bg-fire-500/15 text-cream-50 scale-105"
-                  : "border-earth-700/50 bg-earth-800/30 text-cream-300 hover:border-tan-400/40",
-              )}
-            >
-              <n.icon className="h-7 w-7" />
-              {n.label}
-            </button>
-          ))}
-        </div>
+        <div className="mt-6 space-y-4">
+          <div>
+            <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+              Your Name <span className="text-fire-500">*</span>
+            </label>
+            <input
+              required
+              name="name"
+              placeholder="John Smith"
+              className={inputClass}
+            />
+          </div>
 
-        <div className="mt-5 grid gap-3 sm:grid-cols-2">
-          <input
-            required
-            name="name"
-            placeholder="Your Name"
-            className="rounded-2xl border border-earth-700/50 bg-earth-800/30 px-5 py-4 text-base text-cream-100 placeholder:text-cream-300/40 outline-none focus:border-fire-500/60"
-          />
-          <input
-            required
-            type="tel"
-            name="phone"
-            placeholder="Your Phone Number"
-            className="rounded-2xl border border-earth-700/50 bg-earth-800/30 px-5 py-4 text-base text-cream-100 placeholder:text-cream-300/40 outline-none focus:border-fire-500/60"
-          />
+          <div>
+            <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+              Phone Number <span className="text-fire-500">*</span>
+            </label>
+            <input
+              required
+              type="tel"
+              name="phone"
+              placeholder="(615) 555-1234"
+              className={inputClass}
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+              Address <span className="text-fire-500">*</span>
+            </label>
+            <input
+              required
+              name="address"
+              placeholder="123 Main St, Murfreesboro, TN"
+              className={inputClass}
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-sm font-semibold text-cream-200">
+              What&apos;s going on? <span className="text-xs font-normal text-cream-300/50">(optional)</span>
+            </label>
+            <textarea
+              name="description"
+              rows={3}
+              placeholder="Tell us what you're experiencing — even if you're not sure what's wrong, that's okay!"
+              className={inputClass}
+            />
+          </div>
         </div>
 
         <button
           type="submit"
-          disabled={!need}
-          className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-fire-500 px-8 py-5 text-lg font-bold text-white transition-all hover:bg-fire-600 hover:scale-[1.02] disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:scale-100"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-fire-500 px-8 py-5 text-lg font-bold text-white transition-all hover:bg-fire-600 hover:scale-[1.02]"
         >
-          Get My Free Estimate <ArrowRight className="h-5 w-5" />
+          Send My Request <Send className="h-5 w-5" />
         </button>
         <p className="mt-3 text-center text-xs text-cream-300/50">
           No pressure, no spam — just a friendly call back.
