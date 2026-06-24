@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Sora } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SITE } from "@/lib/site-config";
@@ -15,10 +16,10 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const sora = Sora({
-  variable: "--font-sora",
+const slab = Geist({
+  variable: "--font-slab",
   subsets: ["latin"],
-  weight: ["600", "700", "800"],
+  weight: "900",
 });
 
 export const metadata: Metadata = {
@@ -57,9 +58,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} ${slab.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-navy-950 text-zinc-100">
+      <body className="flex min-h-full flex-col bg-forest-950 text-cream-100">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

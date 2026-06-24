@@ -22,17 +22,17 @@ const CHECKLIST = [
 
 export default function BlogPostPage() {
   return (
-    <article className="bg-navy-950 py-20 sm:py-28">
+    <article className="bg-forest-950 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-8">
         <Reveal>
-          <div className="flex items-center gap-2 text-xs text-zinc-500">
+          <div className="flex items-center gap-2 text-xs text-cream-300/60">
             <Calendar className="h-3.5 w-3.5" />
             March 1, 2026
           </div>
-          <h1 className="font-display mt-3 text-3xl font-extrabold text-white sm:text-4xl">
+          <h1 className="font-display mt-3 text-3xl font-extrabold text-cream-50 sm:text-4xl">
             The Homeowner&apos;s HVAC Maintenance Checklist
           </h1>
-          <p className="mt-5 text-lg text-zinc-400">
+          <p className="mt-5 text-lg text-cream-300">
             A little regular upkeep goes a long way toward keeping your
             heating and cooling system efficient, reliable, and out of
             emergency-repair territory. Here&apos;s what we recommend
@@ -43,8 +43,8 @@ export default function BlogPostPage() {
         <Reveal delay={0.1} className="mt-10">
           <ul className="space-y-3">
             {CHECKLIST.map((item) => (
-              <li key={item} className="flex items-start gap-3 text-sm text-zinc-300">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-cyan-300" />
+              <li key={item} className="flex items-start gap-3 text-sm text-cream-200">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-camo-500" />
                 {item}
               </li>
             ))}
@@ -52,7 +52,7 @@ export default function BlogPostPage() {
         </Reveal>
 
         <Reveal delay={0.2} className="mt-10">
-          <p className="text-sm leading-7 text-zinc-400">
+          <p className="text-sm leading-7 text-cream-300">
             Even with diligent at-home care, nothing replaces a professional
             seasonal tune-up. Our maintenance plans bundle a spring cooling
             check and a fall heating check, plus priority scheduling and

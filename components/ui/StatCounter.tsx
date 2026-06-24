@@ -37,13 +37,13 @@ export default function StatCounter({
       viewport={{ once: true }}
       className="text-center"
     >
-      <div className="font-display text-4xl font-extrabold text-white sm:text-5xl">
-        <span className="bg-gradient-to-r from-cyan-300 to-orange-400 bg-clip-text text-transparent">
+      <div className="font-display text-4xl font-extrabold sm:text-5xl">
+        <span className="text-fire-500">
           {count.toLocaleString()}
           {suffix}
         </span>
       </div>
-      <div className="mt-2 text-sm font-medium text-zinc-400">{label}</div>
+      <div className="mt-2 text-sm font-medium text-cream-300">{label}</div>
     </motion.div>
   );
 }

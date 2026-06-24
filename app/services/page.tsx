@@ -62,7 +62,7 @@ export default function ServicesPage() {
             ))}
             <Reveal delay={0.4}>
               <Link href="/maintenance-plans">
-                <GlowCard glow="orange" className="group h-full">
+                <GlowCard glow="fire" className="group h-full">
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-orange-400/20 to-cyan-400/20">
                     <ServiceIcon icon="wrench" className="h-6 w-6 text-orange-400" />
                   </div>

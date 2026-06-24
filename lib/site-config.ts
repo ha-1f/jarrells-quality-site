@@ -2,7 +2,7 @@ export const SITE = {
   name: "Jarrell's Quality",
   tagline: "Heating · Cooling · Comfort",
   homeTagline: "Your Neighbors in Heating & Cooling",
-  domain: "jarrellsqualitytn.com",
+  domain: "jarrellsqualityhvac.com",
   phoneDisplay: "(615) 796-1384",
   phoneTel: "tel:+16157961384",
   smsHref: "sms:+16157961384",

@@ -36,7 +36,7 @@ export default function MaintenancePlansPage() {
       <section className="bg-navy-900 py-20 sm:py-28">
         <div className="mx-auto max-w-5xl px-4 sm:px-8">
           <Reveal>
-            <GlowCard glow="cyan" className="p-8 sm:p-10">
+            <GlowCard glow="fire" className="p-8 sm:p-10">
               <h2 className="font-display text-2xl font-bold text-white">
                 What&apos;s Included
               </h2>

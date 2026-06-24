@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050a14;
-  --foreground: #ededed;
+  --background: #1a1f16;
+  --foreground: #f5f0e8;
 }
 
 @theme inline {
@@ -10,18 +10,45 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-sora);
+  --font-display: var(--font-slab);
 
-  --color-navy-950: #050a14;
-  --color-navy-900: #0a1424;
-  --color-navy-800: #101e35;
+  /* Deep forest / camo base tones */
+  --color-forest-950: #111610;
+  --color-forest-900: #1a2016;
+  --color-forest-800: #24301e;
+  --color-forest-700: #2f4028;
 
-  --color-wood-900: #2b1b10;
-  --color-wood-800: #3f2818;
-  --color-wood-700: #5c3a22;
-  --color-wood-500: #8a5a32;
+  /* Warm earth / wood tones */
+  --color-earth-900: #2b1b10;
+  --color-earth-800: #3f2818;
+  --color-earth-700: #5c3a22;
+  --color-earth-600: #7a4e2d;
+  --color-earth-500: #8a5a32;
+
+  /* Cream / warm whites */
+  --color-cream-50: #fdf8f0;
   --color-cream-100: #fbf3e7;
   --color-cream-200: #f3e6d0;
+  --color-cream-300: #e8d5b5;
+
+  /* Accent: fire orange from logo */
+  --color-fire-500: #e85d1a;
+  --color-fire-600: #cc4f14;
+
+  /* Accent: ice blue from logo */
+  --color-ice-400: #4db8e8;
+  --color-ice-500: #2a9fd6;
+
+  /* Camo greens */
+  --color-camo-800: #3a4a2a;
+  --color-camo-700: #4a5e34;
+  --color-camo-600: #5a7240;
+  --color-camo-500: #6a864c;
+
+  /* Tan / khaki */
+  --color-tan-400: #c4a96a;
+  --color-tan-300: #d4be84;
+  --color-tan-200: #e4d4a0;
 }
 
 body {
@@ -35,22 +62,22 @@ html {
 }
 
 ::selection {
-  background: rgba(34, 211, 238, 0.3);
+  background: rgba(200, 160, 80, 0.35);
 }
 
-/* Low-key camo using the brand colorway (navy/slate/orange-brown) instead of military green */
 .bg-camo {
-  background-color: #0a1424;
+  background-color: #1a2016;
   background-image:
-    radial-gradient(ellipse 55% 38% at 18% 28%, #15314a 0%, transparent 62%),
-    radial-gradient(ellipse 48% 32% at 78% 18%, #1d2c1f 0%, transparent 58%),
-    radial-gradient(ellipse 52% 42% at 62% 78%, #3a2a1a 0%, transparent 62%),
-    radial-gradient(ellipse 38% 28% at 12% 82%, #14202e 0%, transparent 55%),
-    radial-gradient(ellipse 30% 22% at 45% 45%, #2a3a1f 0%, transparent 60%);
+    radial-gradient(ellipse 55% 38% at 18% 28%, #2a3a1e 0%, transparent 62%),
+    radial-gradient(ellipse 48% 32% at 78% 18%, #3a4a2a 0%, transparent 58%),
+    radial-gradient(ellipse 52% 42% at 62% 78%, #2f3820 0%, transparent 62%),
+    radial-gradient(ellipse 38% 28% at 12% 82%, #24301c 0%, transparent 55%),
+    radial-gradient(ellipse 30% 22% at 45% 45%, #344228 0%, transparent 60%),
+    radial-gradient(ellipse 35% 25% at 85% 65%, #2b3a1e 0%, transparent 55%);
 }
 
 .bg-woodgrain {
-  background-color: var(--color-wood-800);
+  background-color: #3f2818;
   background-image: repeating-linear-gradient(
     95deg,
     rgba(0, 0, 0, 0.12) 0px,
@@ -58,4 +85,23 @@ html {
     transparent 3px,
     transparent 14px
   );
+}
+
+.bg-bark {
+  background-color: #2b1b10;
+  background-image:
+    repeating-linear-gradient(
+      92deg,
+      rgba(0, 0, 0, 0.08) 0px,
+      rgba(0, 0, 0, 0.08) 1px,
+      transparent 2px,
+      transparent 10px
+    ),
+    repeating-linear-gradient(
+      88deg,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 2px,
+      transparent 18px
+    );
 }
