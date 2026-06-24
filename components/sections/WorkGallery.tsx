@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Users, ArrowRightLeft, Wrench, Wind } from "lucide-react";
+import { Users, ArrowRightLeft, Wrench, Wind, Video } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 
 const CREW_PHOTOS = [
@@ -56,6 +56,26 @@ const BEFORE_AFTER = [
     after: { photo: "/photos/after-goodman-condenser.jpg", position: "center 50%" },
   },
 ];
+
+const VIDEOS = [
+  { src: "/videos/spring-maintenance.mp4", label: "Spring Maintenance Visit" },
+  { src: "/videos/job-complete-thumbsup.mp4", label: "Job Complete — Thumbs Up" },
+];
+
+function VideoCard({ src, label }: { src: string; label: string }) {
+  return (
+    <div className="group relative overflow-hidden rounded-2xl border border-earth-700/40 bg-navy-950">
+      <video
+        src={src}
+        controls
+        playsInline
+        preload="metadata"
+        className="w-full"
+      />
+      <p className="px-4 py-3 text-sm font-medium text-cream-200">{label}</p>
+    </div>
+  );
+}
 
 function PhotoCard({ src, alt, position }: { src: string; alt: string; position: string }) {
   return (
@@ -149,6 +169,22 @@ export default function WorkGallery() {
           {DUCT_PHOTOS.map((item, i) => (
             <Reveal key={item.photo} delay={i * 0.06}>
               <PhotoCard src={item.photo} alt={item.label} position={item.position} />
+            </Reveal>
+          ))}
+        </div>
+
+        {/* Videos */}
+        <SectionHeader
+          icon={Video}
+          eyebrow="From the Field"
+          title="Videos from the Job"
+          description="Quick clips from our crew out in the field — maintenance visits and finished installs."
+          className="mt-28"
+        />
+        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:max-w-3xl lg:mx-auto">
+          {VIDEOS.map((v, i) => (
+            <Reveal key={v.src} delay={i * 0.1}>
+              <VideoCard src={v.src} label={v.label} />
             </Reveal>
           ))}
         </div>
