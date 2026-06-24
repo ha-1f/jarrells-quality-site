@@ -47,7 +47,7 @@ export default function BlogPage() {
         description="Practical advice from our technicians to help you get more out of your heating and cooling system."
       />
 
-      <section className="bg-forest-900 py-20 sm:py-28">
+      <section className="bg-navy-900 py-20 sm:py-28">
         <div className="mx-auto max-w-4xl px-4 sm:px-8">
           <Reveal className="mb-10 flex items-center gap-3">
             <BookOpen className="h-5 w-5 text-fire-500" />
@@ -59,7 +59,7 @@ export default function BlogPage() {
                 <Link href={`/blog/${post.slug}`}>
                   <GlowCard className="group">
                     <div className="flex items-center gap-3">
-                      <span className="rounded-full bg-camo-600/20 px-3 py-1 text-xs font-semibold text-camo-400">
+                      <span className="rounded-full bg-ice-400/15 px-3 py-1 text-xs font-semibold text-ice-400">
                         {post.category}
                       </span>
                       <div className="flex items-center gap-1.5 text-xs text-cream-300/60">

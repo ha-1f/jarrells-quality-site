@@ -13,9 +13,8 @@ export default function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-camo py-20 sm:py-28">
-      <div className="absolute inset-0 bg-forest-950/50" />
-      <div className="absolute -left-32 top-0 h-72 w-72 rounded-full bg-camo-600/15 blur-[100px]" />
+    <section className="relative overflow-hidden bg-navy-950 py-20 sm:py-28">
+      <div className="absolute -left-32 top-0 h-72 w-72 rounded-full bg-ice-400/15 blur-[100px]" />
       <div className="absolute -right-32 bottom-0 h-72 w-72 rounded-full bg-fire-500/10 blur-[100px]" />
       <div className="relative mx-auto max-w-4xl px-4 text-center sm:px-8">
         <Reveal>

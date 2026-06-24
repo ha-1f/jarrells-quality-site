@@ -12,7 +12,7 @@ export default function Header() {
   const [moreOpen, setMoreOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-earth-700/50 bg-forest-950/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-earth-700/50 bg-navy-950/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-8">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <Image
@@ -58,7 +58,7 @@ export default function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 4 }}
                   transition={{ duration: 0.15 }}
-                  className="absolute left-0 top-full mt-2 w-52 rounded-xl border border-earth-700/50 bg-forest-900 p-2 shadow-xl"
+                  className="absolute left-0 top-full mt-2 w-52 rounded-xl border border-earth-700/50 bg-navy-900 p-2 shadow-xl"
                 >
                   {MORE_LINKS.map((link) => (
                     <Link
@@ -107,7 +107,7 @@ export default function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            className="overflow-hidden border-t border-earth-700/50 bg-forest-950 lg:hidden"
+            className="overflow-hidden border-t border-earth-700/50 bg-navy-950 lg:hidden"
           >
             <div className="flex flex-col gap-1 px-4 py-4">
               {[...NAV_LINKS, ...MORE_LINKS].map((link) => (

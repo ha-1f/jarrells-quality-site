@@ -64,7 +64,7 @@ export default function AboutPage() {
       </PageHero>
 
       {/* Thomas's Founder Story */}
-      <section className="bg-forest-900 py-20 sm:py-28">
+      <section className="bg-navy-900 py-20 sm:py-28">
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-8 lg:grid-cols-2">
           <Reveal>
             <div className="flex justify-center">
@@ -112,9 +112,8 @@ export default function AboutPage() {
       </section>
 
       {/* Brand Values Wall */}
-      <section className="bg-camo relative py-20 sm:py-28">
-        <div className="absolute inset-0 bg-forest-950/50" />
-        <div className="relative mx-auto max-w-7xl px-4 sm:px-8">
+      <section className="bg-navy-900 py-20 sm:py-28">
+        <div className="mx-auto max-w-7xl px-4 sm:px-8">
           <Reveal className="mx-auto max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-wide text-fire-500">
               What We Stand For
@@ -149,7 +148,7 @@ export default function AboutPage() {
       </section>
 
       {/* Trust Badges */}
-      <section className="bg-forest-950 py-20 sm:py-28">
+      <section className="bg-navy-950 py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-8">
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {SITE.trustBadges.map((badge, i) => (

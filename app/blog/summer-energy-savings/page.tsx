@@ -44,7 +44,7 @@ const TIPS = [
 
 export default function BlogPostPage() {
   return (
-    <article className="bg-forest-950 py-20 sm:py-28">
+    <article className="bg-navy-950 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-8">
         <Reveal>
           <div className="flex items-center gap-2 text-xs text-cream-300/60">

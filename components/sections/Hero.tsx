@@ -9,8 +9,8 @@ import QuickEstimateForm from "@/components/sections/QuickEstimateForm";
 
 export default function Hero() {
   return (
-    <section className="bg-camo relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-950/60 via-forest-950/30 to-forest-950/90" />
+    <section className="bg-navy-950 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-navy-950/60 via-navy-950/30 to-navy-950/90" />
 
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center px-4 pb-24 pt-16 text-center sm:px-8 sm:pt-20">
         <motion.div

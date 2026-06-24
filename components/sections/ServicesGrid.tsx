@@ -7,7 +7,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function ServicesGrid() {
   return (
-    <section id="services" className="relative bg-forest-950 py-24 sm:py-32">
+    <section id="services" className="relative bg-navy-950 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-fire-500">

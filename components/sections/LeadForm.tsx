@@ -20,9 +20,9 @@ export default function LeadForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-camo-600/30 bg-camo-800/20 p-10 text-center"
+        className="flex flex-col items-center justify-center gap-4 rounded-3xl border border-ice-400/30 bg-navy-800/20 p-10 text-center"
       >
-        <CheckCircle2 className="h-14 w-14 text-camo-500" />
+        <CheckCircle2 className="h-14 w-14 text-ice-400" />
         <h3 className="font-display text-2xl font-bold text-cream-50">
           Request received!
         </h3>
@@ -38,7 +38,7 @@ export default function LeadForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="space-y-5 rounded-3xl border border-earth-700/40 bg-forest-900/60 p-6 backdrop-blur-sm sm:p-8"
+      className="space-y-5 rounded-3xl border border-earth-700/40 bg-navy-900/60 p-6 backdrop-blur-sm sm:p-8"
     >
       <div>
         <label className="mb-1.5 block text-sm font-semibold text-cream-200">

@@ -5,7 +5,7 @@ import GlowCard from "@/components/ui/GlowCard";
 
 export default function Testimonials() {
   return (
-    <section className="bg-forest-950 py-24 sm:py-32">
+    <section className="bg-navy-950 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-fire-500">
@@ -16,7 +16,7 @@ export default function Testimonials() {
           </h2>
         </Reveal>
 
-        <Reveal delay={0.05} className="mx-auto mt-8 flex max-w-md items-center justify-center gap-3 rounded-full border border-earth-700/40 bg-forest-900/60 px-6 py-3">
+        <Reveal delay={0.05} className="mx-auto mt-8 flex max-w-md items-center justify-center gap-3 rounded-full border border-earth-700/40 bg-navy-900/60 px-6 py-3">
           <ThumbsUp className="h-5 w-5 text-tan-400" />
           <span className="text-sm text-cream-200">
             <span className="font-bold text-cream-50">

@@ -23,7 +23,7 @@ export default function GlowCard({
       whileHover={{ y: -6 }}
       transition={{ type: "spring", stiffness: 300, damping: 20 }}
       className={clsx(
-        "rounded-2xl border border-earth-700/40 bg-forest-900/60 p-6 backdrop-blur-sm transition-all duration-300",
+        "rounded-2xl border border-earth-700/40 bg-navy-900/60 p-6 backdrop-blur-sm transition-all duration-300",
         glowColor,
         className,
       )}

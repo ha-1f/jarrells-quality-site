@@ -7,14 +7,11 @@ const ITEMS = [
   { photo: "/photos/team-condenser-repair.jpg", label: "Condenser Repair", position: "center 50%" },
   { photo: "/photos/team-mini-split-install.jpg", label: "Mini Split Installation", position: "center 40%" },
   { photo: "/photos/team-new-construction.jpg", label: "New Construction HVAC", position: "center 50%" },
-  { photo: "/photos/ac-unit-1.jpg", label: "Central AC Installs", position: "20% 80%" },
-  { photo: "/photos/ac-unit-2.jpg", label: "Outdoor Unit Service", position: "center 45%" },
-  { photo: "/photos/technician-2.jpg", label: "On-Site Installations", position: "center 55%" },
 ];
 
 export default function WorkGallery() {
   return (
-    <section className="bg-forest-900 py-24 sm:py-32">
+    <section className="bg-navy-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-tan-400">
@@ -41,7 +38,7 @@ export default function WorkGallery() {
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-forest-950/85 via-forest-950/10 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/10 to-transparent" />
                 <span className="absolute bottom-4 left-5 text-sm font-semibold text-cream-50 drop-shadow-lg">
                   {item.label}
                 </span>

@@ -4,7 +4,7 @@ import Reveal from "@/components/ui/Reveal";
 
 export default function ServiceAreaSection() {
   return (
-    <section className="bg-forest-950 py-24 sm:py-32">
+    <section className="bg-navy-950 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <Reveal>
@@ -23,7 +23,7 @@ export default function ServiceAreaSection() {
               {SITE.serviceAreas.map((area) => (
                 <span
                   key={area}
-                  className="flex items-center gap-1.5 rounded-full border border-earth-700/40 bg-forest-900/60 px-4 py-2 text-sm text-cream-200"
+                  className="flex items-center gap-1.5 rounded-full border border-earth-700/40 bg-navy-900/60 px-4 py-2 text-sm text-cream-200"
                 >
                   <MapPin className="h-3.5 w-3.5 text-fire-500" />
                   {area}
@@ -41,8 +41,8 @@ export default function ServiceAreaSection() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-forest-950/90 via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-forest-950/85 p-4 backdrop-blur-sm">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-navy-950/85 p-4 backdrop-blur-sm">
                 <p className="text-sm font-semibold text-cream-50">
                   Not sure if we cover your area?
                 </p>

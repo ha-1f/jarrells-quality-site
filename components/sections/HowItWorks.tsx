@@ -4,7 +4,7 @@ import Reveal from "@/components/ui/Reveal";
 export default function HowItWorks() {
   return (
     <section className="bg-woodgrain relative overflow-hidden border-y-4 border-earth-600/40 py-20 sm:py-24">
-      <div className="bg-camo absolute inset-0 opacity-10" />
+      <div className="bg-navy-800 absolute inset-0 opacity-10" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-8">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="text-sm font-semibold uppercase tracking-wide text-tan-400">
@@ -22,7 +22,7 @@ export default function HowItWorks() {
         <div className="mt-12 grid gap-8 sm:grid-cols-3">
           {HOW_IT_WORKS.map((step, i) => (
             <Reveal key={step.step} delay={i * 0.1} className="text-center">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-4 border-fire-500 bg-forest-950 font-display text-2xl font-extrabold text-fire-500">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full border-4 border-fire-500 bg-navy-950 font-display text-2xl font-extrabold text-fire-500">
                 {step.step}
               </div>
               <h3 className="mt-5 text-lg font-bold text-cream-50">

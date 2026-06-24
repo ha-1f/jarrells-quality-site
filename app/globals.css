@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1a1f16;
+  --background: #0a0f1a;
   --foreground: #f5f0e8;
 }
 
@@ -12,11 +12,11 @@
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-slab);
 
-  /* Deep forest / camo base tones */
-  --color-forest-950: #111610;
-  --color-forest-900: #1a2016;
-  --color-forest-800: #24301e;
-  --color-forest-700: #2f4028;
+  /* Deep navy base tones */
+  --color-navy-950: #0a0f1a;
+  --color-navy-900: #111827;
+  --color-navy-800: #1e2a3a;
+  --color-navy-700: #2a3a4e;
 
   /* Warm earth / wood tones */
   --color-earth-900: #2b1b10;
@@ -39,11 +39,12 @@
   --color-ice-400: #4db8e8;
   --color-ice-500: #2a9fd6;
 
-  /* Camo greens */
+  /* Camo greens (kept for subtle accents) */
   --color-camo-800: #3a4a2a;
   --color-camo-700: #4a5e34;
   --color-camo-600: #5a7240;
   --color-camo-500: #6a864c;
+  --color-camo-400: #7a9a58;
 
   /* Tan / khaki */
   --color-tan-400: #c4a96a;
@@ -62,18 +63,7 @@ html {
 }
 
 ::selection {
-  background: rgba(200, 160, 80, 0.35);
-}
-
-.bg-camo {
-  background-color: #1a2016;
-  background-image:
-    radial-gradient(ellipse 55% 38% at 18% 28%, #2a3a1e 0%, transparent 62%),
-    radial-gradient(ellipse 48% 32% at 78% 18%, #3a4a2a 0%, transparent 58%),
-    radial-gradient(ellipse 52% 42% at 62% 78%, #2f3820 0%, transparent 62%),
-    radial-gradient(ellipse 38% 28% at 12% 82%, #24301c 0%, transparent 55%),
-    radial-gradient(ellipse 30% 22% at 45% 45%, #344228 0%, transparent 60%),
-    radial-gradient(ellipse 35% 25% at 85% 65%, #2b3a1e 0%, transparent 55%);
+  background: rgba(77, 184, 232, 0.3);
 }
 
 .bg-woodgrain {
@@ -85,23 +75,4 @@ html {
     transparent 3px,
     transparent 14px
   );
-}
-
-.bg-bark {
-  background-color: #2b1b10;
-  background-image:
-    repeating-linear-gradient(
-      92deg,
-      rgba(0, 0, 0, 0.08) 0px,
-      rgba(0, 0, 0, 0.08) 1px,
-      transparent 2px,
-      transparent 10px
-    ),
-    repeating-linear-gradient(
-      88deg,
-      rgba(255, 255, 255, 0.03) 0px,
-      rgba(255, 255, 255, 0.03) 1px,
-      transparent 2px,
-      transparent 18px
-    );
 }

@@ -22,7 +22,7 @@ const CHECKLIST = [
 
 export default function BlogPostPage() {
   return (
-    <article className="bg-forest-950 py-20 sm:py-28">
+    <article className="bg-navy-950 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-8">
         <Reveal>
           <div className="flex items-center gap-2 text-xs text-cream-300/60">
@@ -44,7 +44,7 @@ export default function BlogPostPage() {
           <ul className="space-y-3">
             {CHECKLIST.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-cream-200">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-camo-500" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-ice-400" />
                 {item}
               </li>
             ))}

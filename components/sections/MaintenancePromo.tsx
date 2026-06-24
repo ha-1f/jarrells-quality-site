@@ -11,8 +11,8 @@ const PERKS = [
 
 export default function MaintenancePromo() {
   return (
-    <section className="relative overflow-hidden bg-forest-950 py-24 sm:py-32">
-      <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-camo-600/10 blur-[120px]" />
+    <section className="relative overflow-hidden bg-navy-950 py-24 sm:py-32">
+      <div className="absolute left-1/2 top-1/2 h-[600px] w-[600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-ice-400/10 blur-[120px]" />
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-4 sm:px-8 lg:grid-cols-2">
         <Reveal>
           <span className="text-sm font-semibold uppercase tracking-wide text-tan-400">
@@ -29,7 +29,7 @@ export default function MaintenancePromo() {
           <ul className="mt-6 space-y-3">
             {PERKS.map((perk) => (
               <li key={perk} className="flex items-start gap-3 text-sm text-cream-200">
-                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-camo-500" />
+                <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-ice-400" />
                 {perk}
               </li>
             ))}
@@ -43,7 +43,7 @@ export default function MaintenancePromo() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <div className="rounded-3xl border border-earth-700/40 bg-forest-900/60 p-8 backdrop-blur-sm">
+          <div className="rounded-3xl border border-earth-700/40 bg-navy-900/60 p-8 backdrop-blur-sm">
             <div className="flex items-baseline gap-2">
               <span className="font-display text-5xl font-extrabold text-fire-500">
                 $25

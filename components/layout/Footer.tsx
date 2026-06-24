@@ -5,7 +5,7 @@ import { SITE, NAV_LINKS, SERVICES } from "@/lib/site-config";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-earth-700/40 bg-forest-950">
+    <footer className="border-t border-earth-700/40 bg-navy-950">
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-8 lg:grid-cols-4">
         <div>
           <div className="flex items-center gap-3">

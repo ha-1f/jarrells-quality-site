@@ -39,7 +39,7 @@ const SIGNS = [
 
 export default function BlogPostPage() {
   return (
-    <article className="bg-forest-950 py-20 sm:py-28">
+    <article className="bg-navy-950 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-8">
         <Reveal>
           <div className="flex items-center gap-2 text-xs text-cream-300/60">
@@ -73,7 +73,7 @@ export default function BlogPostPage() {
         </div>
 
         <Reveal delay={0.4} className="mt-10">
-          <div className="rounded-2xl border border-earth-700/40 bg-forest-900/60 p-6">
+          <div className="rounded-2xl border border-earth-700/40 bg-navy-900/60 p-6">
             <div className="flex items-center gap-2 text-fire-500">
               <AlertTriangle className="h-5 w-5" />
               <h3 className="font-bold">Not sure? We&apos;ll tell you straight.</h3>

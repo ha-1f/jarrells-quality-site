@@ -23,7 +23,7 @@ export default function QuickEstimateForm() {
         animate={{ opacity: 1, scale: 1 }}
         className="flex flex-col items-center gap-3 rounded-3xl border-4 border-tan-400/20 bg-earth-800/40 p-10 text-center"
       >
-        <CheckCircle2 className="h-14 w-14 text-camo-500" />
+        <CheckCircle2 className="h-14 w-14 text-ice-400" />
         <h3 className="font-display text-2xl font-bold text-cream-50">
           Got it! We&apos;ll call you shortly.
         </h3>
@@ -39,7 +39,7 @@ export default function QuickEstimateForm() {
     <Reveal>
       <form
         onSubmit={handleSubmit}
-        className="mx-auto max-w-2xl rounded-3xl border border-earth-700/50 bg-forest-900/60 p-6 backdrop-blur-sm sm:p-8"
+        className="mx-auto max-w-2xl rounded-3xl border border-earth-700/50 bg-navy-900/60 p-6 backdrop-blur-sm sm:p-8"
       >
         <p className="text-center text-lg font-bold text-cream-50">
           Get a Free Estimate

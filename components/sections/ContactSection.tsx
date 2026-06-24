@@ -5,7 +5,7 @@ import LeadForm from "@/components/sections/LeadForm";
 
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-forest-900 py-24 sm:py-32">
+    <section id="contact" className="bg-navy-900 py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-5">
           <Reveal className="lg:col-span-2">
