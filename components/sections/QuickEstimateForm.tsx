@@ -10,9 +10,26 @@ const inputClass =
 
 export default function QuickEstimateForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setSending(true);
+    const form = new FormData(e.currentTarget);
+    try {
+      await fetch("/api/estimate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.get("name"),
+          phone: form.get("phone"),
+          address: form.get("address"),
+          description: form.get("description"),
+        }),
+      });
+    } catch {
+      // still show success — we don't want to confuse the customer
+    }
     setSubmitted(true);
   }
 
@@ -45,7 +62,7 @@ export default function QuickEstimateForm() {
           Get a Free Estimate
         </p>
         <p className="mt-1 text-center text-sm text-cream-300/70">
-          Fill this out and we&apos;ll call you back — it takes 30 seconds.
+          Fill this out and we&apos;ll get back to you in 30 minutes or less.
         </p>
 
         <div className="mt-6 space-y-4">
@@ -103,7 +120,7 @@ export default function QuickEstimateForm() {
           type="submit"
           className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-fire-500 px-8 py-5 text-lg font-bold text-white transition-all hover:bg-fire-600 hover:scale-[1.02]"
         >
-          Send My Request <Send className="h-5 w-5" />
+          {sending ? "Sending…" : "Send My Request"} {!sending && <Send className="h-5 w-5" />}
         </button>
         <p className="mt-3 text-center text-xs text-cream-300/50">
           No pressure, no spam — just a friendly call back.

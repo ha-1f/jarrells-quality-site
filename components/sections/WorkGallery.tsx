@@ -38,7 +38,7 @@ const BEFORE_AFTER = [
   },
   {
     title: "Condenser Upgrade",
-    description: "Replaced a worn-out condenser with a new Goodman unit — fresh install, clean pad, ready to run.",
+    description: "Replaced a worn-out condenser with a new Goodman unit — fresh install, ready to run.",
     before: { photo: "/photos/before-goodman-condenser.jpg", position: "center 50%" },
     after: { photo: "/photos/after-goodman-condenser.jpg", position: "center 50%" },
   },
@@ -55,10 +55,6 @@ function PhotoCard({ src, alt, position }: { src: string; alt: string; position:
         className="object-cover transition-transform duration-500 group-hover:scale-110"
         sizes="(max-width: 768px) 50vw, 25vw"
       />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/85 via-navy-950/10 to-transparent" />
-      <span className="absolute bottom-4 left-5 text-sm font-semibold text-cream-50 drop-shadow-lg">
-        {alt}
-      </span>
     </div>
   );
 }

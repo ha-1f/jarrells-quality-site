@@ -9,9 +9,26 @@ const inputClass =
 
 export default function LeadForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setSending(true);
+    const form = new FormData(e.currentTarget);
+    try {
+      await fetch("/api/estimate", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.get("name"),
+          phone: form.get("phone"),
+          address: form.get("address"),
+          description: form.get("description"),
+        }),
+      });
+    } catch {
+      // still show success
+    }
     setSubmitted(true);
   }
 
@@ -97,7 +114,7 @@ export default function LeadForm() {
         Send My Request <Send className="h-5 w-5" />
       </button>
       <p className="text-center text-xs text-cream-300/50">
-        No pressure, no spam — just a friendly call back.
+        We&apos;ll get back to you in 30 minutes or less.
       </p>
     </form>
   );

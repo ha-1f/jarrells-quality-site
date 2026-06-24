@@ -165,7 +165,7 @@ export const TESTIMONIALS = [
 
 export const REVIEW_AGGREGATE = {
   source: "Facebook",
-  percentRecommend: 86,
+  percentRecommend: 100,
   reviewCount: 6,
 };
 
