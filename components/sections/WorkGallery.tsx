@@ -1,8 +1,12 @@
 import Image from "next/image";
-import { Wrench } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 
 const ITEMS = [
+  { photo: "/photos/team-rooftop-commercial.jpg", label: "Commercial Rooftop Service", position: "center 40%" },
+  { photo: "/photos/team-unit-service.jpg", label: "Unit Maintenance & Filter Work", position: "center 30%" },
+  { photo: "/photos/team-condenser-repair.jpg", label: "Condenser Repair", position: "center 50%" },
+  { photo: "/photos/team-mini-split-install.jpg", label: "Mini Split Installation", position: "center 40%" },
+  { photo: "/photos/team-new-construction.jpg", label: "New Construction HVAC", position: "center 50%" },
   { photo: "/photos/ac-unit-1.jpg", label: "Central AC Installs", position: "20% 80%" },
   { photo: "/photos/ac-unit-2.jpg", label: "Outdoor Unit Service", position: "center 45%" },
   { photo: "/photos/technician-2.jpg", label: "On-Site Installations", position: "center 55%" },
@@ -17,17 +21,17 @@ export default function WorkGallery() {
             Our Work
           </span>
           <h2 className="font-display mt-3 text-3xl font-bold text-cream-50 sm:text-4xl">
-            Recent Jobs Across Middle Tennessee
+            Our Team in Action
           </h2>
           <p className="mt-4 text-cream-300">
-            A few shots while our real job-photo gallery gets built out —
-            here&apos;s the kind of work we do every week.
+            Real photos of our crew on real job sites across Middle Tennessee
+            — residential, commercial, and new construction.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((item, i) => (
-            <Reveal key={item.label} delay={i * 0.08}>
+            <Reveal key={item.photo} delay={i * 0.06}>
               <div className="group relative aspect-square overflow-hidden rounded-2xl border border-earth-700/40">
                 <Image
                   src={item.photo}
@@ -38,23 +42,12 @@ export default function WorkGallery() {
                   sizes="(max-width: 768px) 50vw, 25vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-950/85 via-forest-950/10 to-transparent" />
-                <span className="absolute bottom-5 left-6 text-sm font-semibold text-cream-50">
+                <span className="absolute bottom-4 left-5 text-sm font-semibold text-cream-50 drop-shadow-lg">
                   {item.label}
                 </span>
               </div>
             </Reveal>
           ))}
-          <Reveal delay={0.32}>
-            <div className="group relative flex aspect-square flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-dashed border-earth-700/40 bg-forest-900/40 p-6 text-center">
-              <Wrench className="h-9 w-9 text-fire-500" />
-              <span className="text-sm font-semibold text-cream-50">
-                Your Job Could Be Next
-              </span>
-              <p className="text-xs text-cream-300/60">
-                Real before/after photos coming as we finish more projects.
-              </p>
-            </div>
-          </Reveal>
         </div>
       </div>
     </section>
