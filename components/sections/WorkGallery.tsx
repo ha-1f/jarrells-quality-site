@@ -37,12 +37,6 @@ const BEFORE_AFTER = [
     after: { photo: "/photos/after-goodman-front.jpg", position: "center 50%" },
   },
   {
-    title: "Package Unit — Side View",
-    description: "Same job, different angle — old Carrier out, new Goodman in. Clean pad, fresh lineset, done right.",
-    before: { photo: "/photos/before-carrier-package-side2.jpg", position: "center 50%" },
-    after: { photo: "/photos/after-goodman-package-wide.jpg", position: "center 50%" },
-  },
-  {
     title: "Condenser Upgrade",
     description: "Replaced a worn-out condenser with a new Goodman unit — fresh install, clean pad, ready to run.",
     before: { photo: "/photos/before-goodman-condenser.jpg", position: "center 50%" },
