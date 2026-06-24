@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Users, ArrowRightLeft, Wrench } from "lucide-react";
+import { Users, ArrowRightLeft, Wrench, Wind } from "lucide-react";
 import Reveal from "@/components/ui/Reveal";
 
 const CREW_PHOTOS = [
@@ -27,6 +27,19 @@ const INSTALL_PHOTOS = [
   { photo: "/photos/unit-multi-unit-commercial.jpg", label: "Multi-Unit Commercial Install", position: "center 40%" },
   { photo: "/photos/unit-dual-system-commercial.jpg", label: "Dual System — Commercial", position: "center 50%" },
   { photo: "/photos/unit-condenser-brick2.jpg", label: "Condenser Install — Residential", position: "center 50%" },
+];
+
+const DUCT_PHOTOS = [
+  { photo: "/photos/duct-crawlspace-1.jpg", label: "Crawlspace Ductwork", position: "center 50%" },
+  { photo: "/photos/duct-crawlspace-2.jpg", label: "Crawlspace Duct Run", position: "center 50%" },
+  { photo: "/photos/duct-crawlspace-3.jpg", label: "Crawlspace Flex Duct Install", position: "center 50%" },
+  { photo: "/photos/duct-crawlspace-4.jpg", label: "Crawlspace Duct System", position: "center 50%" },
+  { photo: "/photos/duct-crawlspace-5.jpg", label: "Crawlspace Duct Routing", position: "center 50%" },
+  { photo: "/photos/duct-crawlspace-6.jpg", label: "Crawlspace Trunk Line", position: "center 50%" },
+  { photo: "/photos/duct-crawlspace-7.jpg", label: "Crawlspace Duct & Plenum", position: "center 50%" },
+  { photo: "/photos/duct-newconstruction-1.jpg", label: "New Construction — Attic Ductwork", position: "center 50%" },
+  { photo: "/photos/duct-newconstruction-2.jpg", label: "New Construction — Duct Layout", position: "center 50%" },
+  { photo: "/photos/duct-newconstruction-3.jpg", label: "New Construction — Overhead Ducts", position: "center 50%" },
 ];
 
 const BEFORE_AFTER = [
@@ -118,6 +131,22 @@ export default function WorkGallery() {
         />
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {INSTALL_PHOTOS.map((item, i) => (
+            <Reveal key={item.photo} delay={i * 0.06}>
+              <PhotoCard src={item.photo} alt={item.label} position={item.position} />
+            </Reveal>
+          ))}
+        </div>
+
+        {/* Ductwork */}
+        <SectionHeader
+          icon={Wind}
+          eyebrow="Ductwork"
+          title="Ducts Done Right"
+          description="Crawlspace replacements, new construction installs — proper ductwork means proper airflow. Here's what ours looks like."
+          className="mt-28"
+        />
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {DUCT_PHOTOS.map((item, i) => (
             <Reveal key={item.photo} delay={i * 0.06}>
               <PhotoCard src={item.photo} alt={item.label} position={item.position} />
             </Reveal>
