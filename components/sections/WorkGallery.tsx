@@ -7,6 +7,12 @@ const ITEMS = [
   { photo: "/photos/team-condenser-repair.jpg", label: "Condenser Repair", position: "center 50%" },
   { photo: "/photos/team-mini-split-install.jpg", label: "Mini Split Installation", position: "center 40%" },
   { photo: "/photos/team-new-construction.jpg", label: "New Construction HVAC", position: "center 50%" },
+  { photo: "/photos/before-carrier-front.jpg", label: "Before — Old Carrier Unit", position: "center 50%" },
+  { photo: "/photos/after-goodman-front.jpg", label: "After — New Goodman Install", position: "center 50%" },
+  { photo: "/photos/before-carrier-side.jpg", label: "Before — Side View", position: "center 50%" },
+  { photo: "/photos/after-goodman-side.jpg", label: "After — Side View", position: "center 40%" },
+  { photo: "/photos/before-goodman-condenser.jpg", label: "Before — Old Condenser", position: "center 50%" },
+  { photo: "/photos/after-goodman-condenser.jpg", label: "After — New Goodman Condenser", position: "center 50%" },
 ];
 
 export default function WorkGallery() {
