@@ -17,6 +17,8 @@ export const SITE = {
     "Shelbyville",
     "Manchester",
     "Tullahoma",
+    "Winchester",
+    "Lewisburg",
   ],
   hours: [
     { day: "Monday – Friday", time: "8:00 AM – 5:00 PM" },

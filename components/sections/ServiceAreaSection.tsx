@@ -1,7 +1,6 @@
 import { MapPin } from "lucide-react";
 import { SITE } from "@/lib/site-config";
 import Reveal from "@/components/ui/Reveal";
-import ServiceAreaMap from "./ServiceAreaMap";
 
 export default function ServiceAreaSection() {
   return (
@@ -24,9 +23,9 @@ export default function ServiceAreaSection() {
               {SITE.serviceAreas.map((area) => (
                 <span
                   key={area}
-                  className="flex items-center gap-1.5 rounded-full border border-earth-700/40 bg-navy-900/60 px-4 py-2 text-sm text-cream-200"
+                  className="flex items-center gap-1.5 rounded-full border border-fire-500/40 bg-fire-500/10 px-4 py-2.5 text-sm font-semibold text-cream-50 shadow-sm shadow-fire-500/10"
                 >
-                  <MapPin className="h-3.5 w-3.5 text-fire-500" />
+                  <MapPin className="h-4 w-4 text-fire-500" />
                   {area}
                 </span>
               ))}
@@ -34,7 +33,25 @@ export default function ServiceAreaSection() {
           </Reveal>
 
           <Reveal delay={0.15}>
-            <ServiceAreaMap />
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl border border-earth-700/40">
+              <iframe
+                title="Jarrell's Quality service area map — Murfreesboro, TN"
+                src="https://www.google.com/maps?q=Murfreesboro,+TN&z=9&output=embed"
+                className="absolute inset-0 h-full w-full sepia-[0.3] contrast-[1.05] brightness-[0.85]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-navy-950/90 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-navy-950/85 p-4 backdrop-blur-sm">
+                <p className="text-sm font-semibold text-cream-50">
+                  Not sure if we cover your area?
+                </p>
+                <p className="mt-1 text-xs text-cream-300">
+                  Call or text {SITE.phoneDisplay} — if we don&apos;t serve
+                  you directly, we&apos;ll point you in the right direction.
+                </p>
+              </div>
+            </div>
           </Reveal>
         </div>
       </div>
