@@ -1,13 +1,20 @@
 import Link from "next/link";
 import Image from "next/image";
+import QRCode from "qrcode";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { SITE, NAV_LINKS, SERVICES } from "@/lib/site-config";
 
-export default function Footer() {
+export default async function Footer() {
+  const qrSvg = await QRCode.toString(`https://${SITE.domain}`, {
+    type: "svg",
+    margin: 1,
+    color: { dark: "#f5f1e8", light: "#0000" },
+  });
+
   return (
     <footer className="border-t border-earth-700/40 bg-navy-950">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-8 lg:grid-cols-4">
-        <div>
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:px-8 lg:grid-cols-5">
+        <div className="lg:col-span-2">
           <div className="flex items-center gap-3">
             <Image
               src="/logo.jpg"
@@ -103,6 +110,18 @@ export default function Footer() {
               </span>
             </li>
           </ul>
+        </div>
+
+        <div>
+          <h3 className="text-sm font-semibold uppercase tracking-wide text-tan-400">
+            Scan to Visit
+          </h3>
+          <a
+            href={`https://${SITE.domain}`}
+            aria-label={`Scan or click to visit ${SITE.domain}`}
+            className="mt-4 inline-block w-28 rounded-xl bg-navy-900/60 p-2"
+            dangerouslySetInnerHTML={{ __html: qrSvg }}
+          />
         </div>
       </div>
 
